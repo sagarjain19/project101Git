@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "project101-dev-datafactory"
+		},
+		"LS_AzureBlobStorage1_Dev_properties_typeProperties_connectionString_secretName": {
+			"value": "Dev-Sa-Key"
+		},
+		"LS_AzureKeyVault1_Dev_properties_typeProperties_baseUrl": {
+			"value": "https://project101dev-keyvault.vault.azure.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
