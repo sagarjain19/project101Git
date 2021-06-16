@@ -5,7 +5,14 @@
 			{
 				"name": "copy from input to output",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Inputfile Exist",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -59,6 +66,20 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Inputfile Exist",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "source_data",
+						"type": "DatasetReference"
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
 			}
 		],
 		"annotations": [],
